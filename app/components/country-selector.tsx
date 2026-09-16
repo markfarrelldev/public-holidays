@@ -9,7 +9,7 @@ export default function CountrySelector({ countries }: { countries: Country[] })
 	const pathname = usePathname();
 	const { replace } = useRouter();
 
-	const handleSelect = (country) => {
+	const handleSelect = (country: string) => {
 		const params = new URLSearchParams(searchParams);
 
 		if(country){

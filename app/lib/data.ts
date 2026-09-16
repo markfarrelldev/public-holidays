@@ -1,4 +1,4 @@
-import { Country } from './definitions';
+import { Country, Holiday } from './definitions';
 
 export async function fetchCountries(): Promise<Country[]>{
 		// Fetch country list from Open Holidays API
@@ -11,7 +11,7 @@ export async function fetchCountries(): Promise<Country[]>{
 		return data.json();
 }
 
-export async function fetchHolidays(country): Promise<Holiday[]>{
+export async function fetchHolidays(country: string): Promise<Holiday[]>{
 	
 	const d = new Date();
 	const year = d.getFullYear();
